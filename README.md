@@ -292,9 +292,21 @@ option available in syn and the order of variables is exactly the same as the re
 
 The model that we decide to consider is as follows:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=log(\text{YTOTHAJ}_i&plus;1)&=\mu&plus;\alpha&space;\text{SEXO}_i&plus;\beta&space;\text{EDAD}_i\\&space;&&plus;\lambda&space;\text{NUMPER}_i&plus;\eta&space;\text{CORTE}_i&plus;\kappa&space;\text{ASISTE}_i&plus;\epsilon_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(\text{YTOTHAJ}_i&plus;1)&=\mu&plus;\alpha&space;\text{SEXO}_i&plus;\beta&space;\text{EDAD}_i\\&space;&&plus;\lambda&space;\text{NUMPER}_i&plus;\eta&space;\text{CORTE}_i&plus;\kappa&space;\text{ASISTE}_i&plus;\epsilon_i" title="log(\text{YTOTHAJ}_i+1)&=\mu+\alpha \text{SEXO}_i+\beta \text{EDAD}_i\\ &+\lambda \text{NUMPER}_i+\eta \text{CORTE}_i+\kappa \text{ASISTE}_i+\epsilon_i" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=log(\text{YTOTHAJ}_i&plus;1)=\mu&plus;\alpha&space;\text{SEXO}_i&plus;\beta&space;\text{EDAD}_i&plus;\lambda&space;\text{NUMPER}_i&plus;\eta&space;\text{CORTE}_i&plus;\kappa&space;\text{ASISTE}_i&plus;\epsilon_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(\text{YTOTHAJ}_i&plus;1)=\mu&plus;\alpha&space;\text{SEXO}_i&plus;\beta&space;\text{EDAD}_i&plus;\lambda&space;\text{NUMPER}_i&plus;\eta&space;\text{CORTE}_i&plus;\kappa&space;\text{ASISTE}_i&plus;\epsilon_i" title="log(\text{YTOTHAJ}_i+1)=\mu+\alpha \text{SEXO}_i+\beta \text{EDAD}_i+\lambda \text{NUMPER}_i+\eta \text{CORTE}_i+\kappa \text{ASISTE}_i+\epsilon_i" /></a>
+
+where e_i~N(0,1) and i stands for the individual. Other terms are as follows: *YTOTHAJ*:
+total income, *SEXO*: Gender, *EDAD*: Age, *NUMPER*: number of people in household,
+*CORTE*: poverty status, and *ASISTE*: attendency to school.
+
+As we mentioned earlier, the main variable of interest is **YTOTHAJ**. Based on
+the the pooled results of synthetic data set, the mean of total income for synthesized data
+set is smaller than the real one with the difference of 37379.1.
 
 
+| Group | Synth. | YTOTHAJ |
+| --- | --------- | --------- |
+| 1  | FALSE  | 631230.0 |
+| 2  | TRUE  | 593850.9 |
 
 
 
