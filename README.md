@@ -121,3 +121,23 @@ that we consider for the y_i's as observations. In practice, usually testing the
 correlations suffices, but the authors mentioned that the good performance of statistic
 associated to the first order correlation and employing the higher order of the residual
 terms perform poorly and need more investigation.
+
+They provided an example according to
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=y_i=1&plus;x_i&plus;\epsilon_i;&space;\quad&space;\epsilon_i&space;\sim&space;\mathcal{N}(0,1),&space;\quad&space;i=1,...,N" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_i=1&plus;x_i&plus;\epsilon_i;&space;\quad&space;\epsilon_i&space;\sim&space;\mathcal{N}(0,1),&space;\quad&space;i=1,...,N" title="y_i=1+x_i+\epsilon_i; \quad \epsilon_i \sim \mathcal{N}(0,1), \quad i=1,...,N" /></a>
+
+with three different size variables:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=[1]&space;z_i=\textit{exp}(-.1y_i-.08y_i^2&plus;.08x_i^2&plus;.3u_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?[1]&space;z_i=\textit{exp}(-.1y_i-.08y_i^2&plus;.08x_i^2&plus;.3u_i)" title="[1] z_i=\textit{exp}(-.1y_i-.08y_i^2+.08x_i^2+.3u_i)" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=[2]&space;z_i=5&plus;5y_i&plus;3y_i^2&plus;10x_i&plus;3x_i^2&plus;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?[2]&space;z_i=5&plus;5y_i&plus;3y_i^2&plus;10x_i&plus;3x_i^2&plus;u_i" title="[2] z_i=5+5y_i+3y_i^2+10x_i+3x_i^2+u_i" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=[3]&space;z_i=10x_i&plus;3x_i^2&plus;u_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?[3]&space;z_i=10x_i&plus;3x_i^2&plus;u_i" title="[3] z_i=10x_i+3x_i^2+u_i" /></a>
+
+with u_i ~ U(0,1). The w_i = f(z_i) for the first two ones (1 & 2) are related to e_i. So,
+the estimators based on (1 & 2) are not ignorable, and we need to consider the design
+features in our estimators. In other words, the Corr NOT= 0 for the first two ones and the
+Corr=0 for (3), which is non-informative (c.f., ([Pfeffermann and Sverchkov](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.596.4915&rep=rep1&type=pdf), 1999)).
+
+#### A Short Illustration Based on the Casen Survey
+
