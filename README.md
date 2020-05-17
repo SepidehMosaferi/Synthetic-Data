@@ -327,7 +327,7 @@ data set and true data set are as follows: -0.001592752, -0.003529634, 0.0004894
 All of the results show that the
 utility of synthetic data set is good enough and the risk of disclosure is low.
 
-**Mean and SD of propensity score utility value *(utility.summary)* **
+*Mean and SD of propensity score utility value (utility.summary)* 
 
 | Mean | SD |
 | --- | --- |
