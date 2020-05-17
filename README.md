@@ -90,4 +90,26 @@ marginals or the mean and the variance for continuous or discrete data set.
 
 ## Complex Survey and Its Features
 
+The first feature to define a complex sample is that the population members do
+not receive an equal probability of selection. Surveys usually involve combination of different
+stages as sometimes we might not have the list of units or some auxiliary variables are
+available and bring the situation of stratification. Therefore, a survey might be stratified
+with several stages of clustering to make the probability of inclusion and as a consequence
+the survey weighting more complicated.
 
+
+When we would like to make a decision about the effects of clustering, stratification, etc.
+we can benefit from the design effect (Deff) defined by the var(.)complex-design/var(.)srs and 
+its square root is the design factor. The other feature that should be always kept in mind is 
+the kind of estimator that we are looking such as the ratio estimator, regression estimator, etc. 
+This brings another layer of complication in surveys. Therefore, when we want to produce a model 
+for creating the synthetic data set we need to satisfy these features of complex design and many others 
+that are related to our goals.
+
+### Informative and Non-Informative Sampling
+
+Based on the paper by ([Pfeffermann and Sverchkov](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.596.4915&rep=rep1&type=pdf),1999), the informative sampling means
+that we need to consider the design features in the model and without doing that our
+estimators are biased. In this situation the distribution of population and sample are
+different. So, in informative sampling, we need to account for sample selection effects. To
+test the sampling ignorability, we can try
