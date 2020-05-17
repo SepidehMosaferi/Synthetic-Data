@@ -257,7 +257,7 @@ first and second order of moments from some variables based on the synthetic dat
 real data set.
 
 We can produce models for survey data conditional on all sufficient statistics
-of variables depending on which kind of function of parameters we are interested in. In
+of variables depending on which kinds of function of parameters we are interested in. In
 addition, considering weights in the model is another challenge. As weights are not simply
 the inverse of inclusion probability and it contains other factors including non-response
 adjustment, etc. Survey weights depend on the design weights and if we do not consider
@@ -269,12 +269,32 @@ and the quantities of interest. Therefore, we should know how to put all of thes
 hierarchical way in the model. For example, a full hierarchical modeling approach should
 be able to handle cluster sampling.
 
-If in our modeling, we take large samples from the real population and conse-
-quently take large samples from the produced synthetic populations and consider nonin-
-formative or weakly flat prior distributions for the hyperparameters, results can be parallel
-to those from the design-based inference perspective view of point. We refer to examples
+If in our modeling, we take large samples from the real population and consequently 
+take large samples from the produced synthetic populations and consider noninformative 
+or weakly flat prior distributions for the hyperparameters, results can be parallel
+to those from the design-based inference perspective point of view. We refer to examples
 1.1 and 2.1 in the case of stratified and post-stratified sampling in ([Little](https://journals.sagepub.com/doi/abs/10.1177/0008068320080301?casa_token=5CB57k2vLSwAAAAA:UBOLAyVo0NgukHF9WZeCEWHiBv8IkbHlE_xE4Q2_9EXueiPBxHPR7-E59bK_vno7j_jt_Hlxr2si_w), 2008). The
 Bayesian approach can easily handle complex design features such as clustering through
 random cluster models, and stratification through covariates. As a last advice, we need to
 keep in mind that some synthetic data set might produce extreme estimates, which can be
 handled by considering some constrains in the synthesizer model.
+
+## Some Simulation Study and Results
+
+Here we use the "syn()" function under the "synthpop" package to produce the synthetic
+population, which synthesize both categorical and continuous variables one-by-one using
+the sequential modeling. Unfortunately the package does not include the mixed model;
+therefore, we have decided to follow ([Raghunathan et al.](https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/multiple-imputation-for-statistical-disclosure-limitation.pdf), 2003) in some aspects.
+To do so, we generate 5 fully synthetic data set; then we fit a linear regression model
+while the interested parameter or the dependent parameter that we mainly take care is
+the *YTOTHAJ* from the Casen data set. All variables are synthesised using parametric
+option available in syn and the order of variables is exactly the same as the real data.
+
+The model that we decide to consider is as follows:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=log(\text{YTOTHAJ}_i&plus;1)&=\mu&plus;\alpha&space;\text{SEXO}_i&plus;\beta&space;\text{EDAD}_i\\&space;&&plus;\lambda&space;\text{NUMPER}_i&plus;\eta&space;\text{CORTE}_i&plus;\kappa&space;\text{ASISTE}_i&plus;\epsilon_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?log(\text{YTOTHAJ}_i&plus;1)&=\mu&plus;\alpha&space;\text{SEXO}_i&plus;\beta&space;\text{EDAD}_i\\&space;&&plus;\lambda&space;\text{NUMPER}_i&plus;\eta&space;\text{CORTE}_i&plus;\kappa&space;\text{ASISTE}_i&plus;\epsilon_i" title="log(\text{YTOTHAJ}_i+1)&=\mu+\alpha \text{SEXO}_i+\beta \text{EDAD}_i\\ &+\lambda \text{NUMPER}_i+\eta \text{CORTE}_i+\kappa \text{ASISTE}_i+\epsilon_i" /></a>
+
+
+
+
+
