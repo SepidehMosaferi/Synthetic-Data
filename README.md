@@ -237,5 +237,14 @@ and w_i decreases.
 
 2. By adding more random effects to the model, the correlation decreases as well.
 
-### How to Model the Complex Survey Features in the Synthetic Data
+### How to Model the Complex Survey Features in the Synthetic Data?
 
+We need to think carefully about how to model the survey data for producing the synthetic data.
+Many of the keys of sampling including stratification and multi-stages should be taken into
+the model. Modeling of them is a challenge. However, survey statisticians usually do
+not trust models. As Box said: "*All Models Are Wrong!!*". We might also have different
+kinds of modeling:
+
+_Superpopulation Modeling P(Y|\theta) where \theta is fixed,
+
+_Bayesian Modeling: By considering a priori on \theta.
