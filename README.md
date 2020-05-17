@@ -157,6 +157,7 @@ At the National Level (for CORTE v.):
 In all of the following model, we study the relationship of the e from model with the weight
 *EXPR*.
 
+
 a) Model 1: 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y_{ij}=\alpha_i&plus;e_{ij}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{ij}=\alpha_i&plus;e_{ij}" title="y_{ij}=\alpha_i+e_{ij}" /></a> 
@@ -168,6 +169,7 @@ MixModel1 <- lmer(Ipoor ~ 1 + (1|SEGMENTO), HHFRAME)
 t-test_1:-4.816267 ; corr_1:-0.01801419 ; P-value_1: 1.465679e-06
 t-test_2:-7.09896 ; corr_2:-0.02654705 ; P-value_2: 1.268644e-12
 ```
+
 b) Model 2:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y_{ijk}=\alpha_i&plus;\beta_{ij}&plus;e_{ijk}$&space;where&space;$\beta_{ij}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{ijk}=\alpha_i&plus;\beta_{ij}&plus;e_{ijk}$&space;where&space;$\beta_{ij}" title="y_{ijk}=\alpha_i+\beta_{ij}+e_{ijk}$ where $\beta_{ij}" /></a>
@@ -181,5 +183,59 @@ t-test_1:-2.154523 ; corr_1:-0.008059567 ; P-value_1:0.03120248
 t-test_2:-6.876418 ; corr_2: -0.0257154 ; P-value_2:6.18781e-12
 ```
 
+c) Model 3:
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=y_{ijk}=\alpha_i&plus;\beta_j&plus;e_{ijk}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{ijk}=\alpha_i&plus;\beta_j&plus;e_{ijk}" title="y_{ijk}=\alpha_i+\beta_j+e_{ijk}" /></a>
+
+where the first term is **ESTRATO** effect (fixed) and the second term is **SEGMENTO** effect (random).
+
+```
+MixModel3 <- lmer(Ipoor~ESTRATO+(1|SEGMENTO),data=HHFRAME)
+t-test_1:-4.868832 ; corr_1:-0.01821073 ; P-value_1:1.124988e-06
+t-test_2:-7.091298 ; corr_2: -0.02651841 ; P-value_2:1.340866e-12
+```
+
+d) Model 4:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=y_{ijk}=\alpha_i&plus;\beta_j&plus;e_{ijk}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{ijk}=\alpha_i&plus;\beta_j&plus;e_{ijk}" title="y_{ijk}=\alpha_i+\beta_j+e_{ijk}" /></a>
+
+where the first term is **ESTRATO** effect (random) and the second term is **SEGMENTO** effect (random).
+
+```
+MixModel4 <- lmer(Ipoor~(1|ESTRATO)+(1|SEGMENTO),data=HHFRAME)
+t-test_1:-2.154523 ; corr_1:-0.008059567 ; P-value_1:0.03120248
+t-test_2:-6.876418 ; corr_2: -0.0257154 ; P-value_2:6.18781e-12
+```
+
+e) Model 5:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=y_{ijk}=\alpha_i&plus;\beta_{ij}&plus;e_{ijk}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{ijk}=\alpha_i&plus;\beta_{ij}&plus;e_{ijk}" title="y_{ijk}=\alpha_i+\beta_{ij}+e_{ijk}" /></a>
+
+where the first term is **ESTRATO** effect (fixed) and the second term is **SEGMENTO**
+effect (random and nested in ESTRATO). we have a problem here since ESTRATO can be considered in both Random
+effects and Fixed effects for the output.
+
+```
+MixModel5 <- lmer(Ipoor~ESTRATO+(1|ESTRATO/SEGMENTO),data=HHFRAME)
+t-test_1:-2.216879 ; corr_1:-0.00829281 ; P-value_1:0.02663447
+t-test_2:-6.872541 ; corr_2: -0.02570091 ; P-value_2:6.358293e-12
+```
+
+f) Model 6: 
+**SEGMENTO** is random effect (Logistic Model)
+
+```
+MixModel6 <- glmer(Ipoor ~ 1 + (1 |SEGMENTO), HHFRAME,family = binomial)
+t-test_1:-4.839996 ; corr_1:-0.01810291 ; P-value_1:1.301122e-06
+t-test_2:-7.329264 ; corr_2: -0.02740765 ; P-value_2:2.338534e-13
+```
+
+Based on these data analysis, we can conclude:
+
+1. When we put more features of the design in the model, the correlation between e_i
+and w_i decreases.
+
+2. By adding more random effects to the model, the correlation decreases as well.
+
+### How to Model the Complex Survey Features in the Synthetic Data
 
