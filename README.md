@@ -334,13 +334,15 @@ utility of synthetic data set is good enough and the risk of disclosure is low.
 | cart 0.009697415 | 0.0005481128 |
 
 
+
+
 ## References
 
 - Gelman, A. (2007). Struggles with Survey Weighting and Regression Modeling. *Statistical Science*, 
 **22**, 153-164. [link](http://www.stat.columbia.edu/~gelman/research/published/STS226.pdf)
 
 - Hu, J., Reiter, J. P., and Wang, Q. (2013). *Disclosure Risk Evaluation for Fully Synthetic Categorical Data*. 
-Duke University, Durham NC 27708, USA. [link] (http://www2.stat.duke.edu/~jerry/Papers/PSD2014.pdf)
+Duke University, Durham NC 27708, USA. [link](http://www2.stat.duke.edu/~jerry/Papers/PSD2014.pdf)
 
 - Little, R. J. (2008). Weighting and Prediction in Sample Surveys. *Calcutta Statistical
 Association Bulletin*, **60**, 1-49. [link](https://journals.sagepub.com/doi/abs/10.1177/0008068320080301?casa_token=bT3o8YCRNn0AAAAA:ABaVu6qMwb9vzooV0A97vg2rZ2_z2TZa21gK3G_BYIbNaRIBH2U6738uPCwV0XUtcZSwIMcA0YM5_Q)
