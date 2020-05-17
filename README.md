@@ -141,7 +141,7 @@ Corr=0 for (3), which is non-informative (c.f., ([Pfeffermann and Sverchkov](htt
 
 #### A Short Illustration Based on the Chile National Socioeconomic Characterization Survey (Casen) Survey
 
-Here, we illustrate the informative and non-informative sampling via the [Casen 2009 survey] (http://ghdx.healthdata.org/record/chile-national-socioeconomic-characterization-survey-2009),
+Here, we illustrate the informative and non-informative sampling via the [Casen](http://ghdx.healthdata.org/record/chile-national-socioeconomic-characterization-survey-2009) 2009 survey,
 which is publicly available. The Casen survey design is a stratified two stage sampling. The
 strata are ESTRATO which is the combination of COMUNA and ZONA together. The
 first stage sampling unit (or PSU) is SEGMENTO. The total number of PSUs is 4117. The
