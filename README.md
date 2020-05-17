@@ -22,7 +22,7 @@ Another kind of modeling is using the penalized spline of propensity prediction,
 <a href="https://www.codecogs.com/eqnedit.php?latex=y_i|p^{*}_i(\psi),x_{i1},...,x_{ip};\psi,\beta,\phi,\sigma^2&space;\sim&space;\mathcal{N}(spl(p^{*}_i(\psi),\beta)&plus;g(p^*_i,x_{i2},...,x_{ip};\phi),\sigma^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_i|p^{*}_i(\psi),x_{i1},...,x_{ip};\psi,\beta,\phi,\sigma^2&space;\sim&space;\mathcal{N}(spl(p^{*}_i(\psi),\beta)&plus;g(p^*_i,x_{i2},...,x_{ip};\phi),\sigma^2)" title="y_i|p^{*}_i(\psi),x_{i1},...,x_{ip};\psi,\beta,\phi,\sigma^2 \sim \mathcal{N}(spl(p^{*}_i(\psi),\beta)+g(p^*_i,x_{i2},...,x_{ip};\phi),\sigma^2)" /></a>
 <a href="https://www.codecogs.com/eqnedit.php?latex=spl(p^{*}_i(\psi),\beta)=\beta_0&plus;\beta_1p^{*}_i(\psi)&plus;\sum_{k=1}^{K}\beta_{k&plus;1}(p^{*}_i(\psi)-\kappa_k)_{&plus;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?spl(p^{*}_i(\psi),\beta)=\beta_0&plus;\beta_1p^{*}_i(\psi)&plus;\sum_{k=1}^{K}\beta_{k&plus;1}(p^{*}_i(\psi)-\kappa_k)_{&plus;}" title="spl(p^{*}_i(\psi),\beta)=\beta_0+\beta_1p^{*}_i(\psi)+\sum_{k=1}^{K}\beta_{k+1}(p^{*}_i(\psi)-\kappa_k)_{+}" /></a>
 
-For more details we refer to ([Little](https://projecteuclid.org/euclid.ss/1312204002),2011).
+For more details we refer to ([Little](https://projecteuclid.org/euclid.ss/1312204002), 2011).
 
 
 Generally speaking, a suitable model as a synthesizer is the key issue, and it
@@ -108,8 +108,16 @@ that are related to our goals.
 
 ### Informative and Non-Informative Sampling
 
-Based on the paper by ([Pfeffermann and Sverchkov](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.596.4915&rep=rep1&type=pdf),1999) the informative sampling means
+Based on the paper by ([Pfeffermann and Sverchkov](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.596.4915&rep=rep1&type=pdf), 1999) the informative sampling means
 that we need to consider the design features in the model and without doing that our
 estimators are biased. In this situation the distribution of population and sample are
 different. So, in informative sampling, we need to account for sample selection effects. To
 test the sampling ignorability, we can try
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_{0k}:&space;\textit{Corr}_s(\e_i^k,w_i)=0&space;\quad&space;k=1,2,..." target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_{0k}:&space;\textit{Corr}_s(\e_i^k,w_i)=0&space;\quad&space;k=1,2,..." title="H_{0k}: \textit{Corr}_s(\epsilon_i^k,w_i)=0 \quad k=1,2,..." /></a>
+
+where Corr is the correlation under the sample distribution and e comes from the model
+that we consider for the y_i's as observations. In practice, usually testing the first 2 or 3
+correlations suffices, but the authors mentioned that the good performance of statistic
+associated to the first order correlation and employing the higher order of the residual
+terms perform poorly and need more investigation.
