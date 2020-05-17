@@ -168,5 +168,18 @@ MixModel1 <- lmer(Ipoor ~ 1 + (1|SEGMENTO), HHFRAME)
 t-test_1:-4.816267 ; corr_1:-0.01801419 ; P-value_1: 1.465679e-06
 t-test_2:-7.09896 ; corr_2:-0.02654705 ; P-value_2: 1.268644e-12
 ```
+b) Model 2:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=y_{ijk}=\alpha_i&plus;\beta_{ij}&plus;e_{ijk}$&space;where&space;$\beta_{ij}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{ijk}=\alpha_i&plus;\beta_{ij}&plus;e_{ijk}$&space;where&space;$\beta_{ij}" title="y_{ijk}=\alpha_i+\beta_{ij}+e_{ijk}$ where $\beta_{ij}" /></a>
+
+where the second term is nested in i and both are random effects. The first term
+is **ESTRATO** effect and the second term is **SEGMENTO** effect.
+
+```
+MixModel2 <- lmer(Ipoor~1+(1|ESTRATO/SEGMENTO),data=HHFRAME)
+t-test_1:-2.154523 ; corr_1:-0.008059567 ; P-value_1:0.03120248
+t-test_2:-6.876418 ; corr_2: -0.0257154 ; P-value_2:6.18781e-12
+```
+
 
 
