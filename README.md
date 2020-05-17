@@ -279,7 +279,7 @@ random cluster models, and stratification through covariates. As a last advice, 
 keep in mind that some synthetic data set might produce extreme estimates, which can be
 handled by considering some constrains in the synthesizer model.
 
-## Some Simulation Study and Results
+## Some Simulation Studies and Results
 
 Here we use the "syn()" function under the "synthpop" package to produce the synthetic
 population, which synthesize both categorical and continuous variables one-by-one using
