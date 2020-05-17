@@ -7,7 +7,7 @@ This is an R code for the model of synthetic data in general and handling the co
 The idea of synthetic data is related to the multiple imputation. However, multiple imputation 
 is related to multivariate distribution. Another easier approach instead of multiple
 imputation is sequential regression multivariate imputation (SRMI) that some packages of
-producing synthetic data including [synthpop in R] (https://cran.r-project.org/web/packages/synthpop/index.html) 
+producing synthetic data including [synthpop](https://cran.r-project.org/web/packages/synthpop/index.html) in R 
 is based on. The SRMI has the advantage of reducing the multivariate missing problem into the univariate missing 
 problem for each variable, but we might have the problem of model misspecification. However, it
 brings other felexibilities in the model including putting the interaction terms in the model,
