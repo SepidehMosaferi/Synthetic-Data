@@ -309,4 +309,27 @@ set is smaller than the real one with the difference of 37379.1.
 | 2  | TRUE  | 593850.9 |
 
 
+Measuring risk in a micro dataset is a key task. Risk measurements are essential
+to determine if the dataset is secure enough to be released. To assess disclosure risk, one
+must make realistic assumptions about the information data users might have at hand
+to match against the micro data set. The *utility.synds* function in *synthpop* package has
+this ability to use the propensity scores, which estimated for probability of membership in
+the synthetic data set. Then the returned value is the mean squared difference between
+these probabilities and the probability of indistinguishability (perctentage of combined
+records in the synthetic data set). As we can see from the following results, the mean of
+this probability is pretty small; therefore, the utility is high and the disclosure risk is low
+as well. This conceptually means the probability that a real observation belongs to the
+synthetic data set is small.
+
+Also, the correlations based on the elements of YTOTHAJ from each synthetic
+data set and true data set are as follows: -0.001592752, -0.003529634, 0.0004894086,
+0.002141235, 0.001136032, which are pretty small and mean that the probability of bijective mapping is pretty small.
+All of the results show that the
+utility of synthetic data set is good enough and the risk of disclosure is low.
+
+|Mean and SD of propensity score utility value|
+| *(utility.summary)*|
+| Mean | SD |
+| --- | --- |
+| cart 0.009697415 | 0.0005481128 |
 
