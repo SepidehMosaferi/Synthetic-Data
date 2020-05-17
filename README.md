@@ -154,6 +154,15 @@ of the housing units). We consider different models at the national level for ho
 to see how the informative sampling works without considering any simulation study.
 
 At the National Level (for CORTE v.):
+In all of the following model, we study the relationship of the  from model with the weight
+*EXPR*.
 
+a) Model 1: <a href="https://www.codecogs.com/eqnedit.php?latex=y_{ij}=\alpha_i&plus;e_{ij}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_{ij}=\alpha_i&plus;e_{ij}" title="y_{ij}=\alpha_i+e_{ij}" /></a> where <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha_i" title="\alpha_i" /></a> is **SEGMENTO** random effect.
+
+```bash
+MixModel1 <- lmer(Ipoor ~ 1 + (1|SEGMENTO), HHFRAME)
+t-test_1:-4.816267 ; corr_1:-0.01801419 ; P-value_1: 1.465679e-06
+t-test_2:-7.09896 ; corr_2:-0.02654705 ; P-value_2: 1.268644e-12
+```
 
 
