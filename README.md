@@ -248,3 +248,33 @@ kinds of modeling:
 - Superpopulation Modeling P(Y|\theta) where \theta is fixed,
 
 - Bayesian Modeling: By considering a priori on \theta.
+
+First we need to pay attention to which steps of complex survey are related to one another. For
+example, if we have a design that sampling or design in each stratum is independent and
+different, we might consider separate model for each stratum. Also as the synthesizer data
+is a model-based approach, model checking is important. So, we can compare the first or
+first and second order of moments from some variables based on the synthetic data set and
+real data set.
+
+We can produce models for survey data conditional on all sufficient statistics
+of variables depending on which kind of function of parameters we are interested in. In
+addition, considering weights in the model is another challenge. As weights are not simply
+the inverse of inclusion probability and it contains other factors including non-response
+adjustment, etc. Survey weights depend on the design weights and if we do not consider
+design features in modeling, the results based on the model synthesizer is biased. Sometimes
+putting interactions in the model might make the model more complicated but it can
+explain some of the steps of design which are confounded. Inserting lots of parameters in
+the model is not important; we rather should put some connections between the model
+and the quantities of interest. Therefore, we should know how to put all of these in a
+hierarchical way in the model. For example, a full hierarchical modeling approach should
+be able to handle cluster sampling.
+
+If in our modeling, we take large samples from the real population and conse-
+quently take large samples from the produced synthetic populations and consider nonin-
+formative or weakly flat prior distributions for the hyperparameters, results can be parallel
+to those from the design-based inference perspective view of point. We refer to examples
+1.1 and 2.1 in the case of stratified and post-stratified sampling in ([Little](https://journals.sagepub.com/doi/abs/10.1177/0008068320080301?casa_token=5CB57k2vLSwAAAAA:UBOLAyVo0NgukHF9WZeCEWHiBv8IkbHlE_xE4Q2_9EXueiPBxHPR7-E59bK_vno7j_jt_Hlxr2si_w), 2008). The
+Bayesian approach can easily handle complex design features such as clustering through
+random cluster models, and stratification through covariates. As a last advice, we need to
+keep in mind that some synthetic data set might produce extreme estimates, which can be
+handled by considering some constrains in the synthesizer model.
