@@ -245,6 +245,6 @@ the model. Modeling of them is a challenge. However, survey statisticians usuall
 not trust models. As Box said: "*All Models Are Wrong!!*". We might also have different
 kinds of modeling:
 
-_Superpopulation Modeling P(Y|\theta) where \theta is fixed,
+- Superpopulation Modeling P(Y|\theta) where \theta is fixed,
 
-_Bayesian Modeling: By considering a priori on \theta.
+- Bayesian Modeling: By considering a priori on \theta.
