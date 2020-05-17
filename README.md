@@ -139,5 +139,21 @@ the estimators based on (1 & 2) are not ignorable, and we need to consider the d
 features in our estimators. In other words, the Corr NOT= 0 for the first two ones and the
 Corr=0 for (3), which is non-informative (c.f., ([Pfeffermann and Sverchkov](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.596.4915&rep=rep1&type=pdf), 1999)).
 
-#### A Short Illustration Based on the Casen Survey
+#### A Short Illustration Based on the Chile National Socioeconomic Characterization Survey (Casen) Survey
+
+Here, we illustrate the informative and non-informative sampling via the [Casen 2009 survey] (http://ghdx.healthdata.org/record/chile-national-socioeconomic-characterization-survey-2009),
+which is publicly available. The Casen survey design is a stratified two stage sampling. The
+strata are ESTRATO which is the combination of COMUNA and ZONA together. The
+first stage sampling unit (or PSU) is SEGMENTO. The total number of PSUs is 4117. The
+PSUs are selected with probability proportional to size measured in terms of the number
+of occupied housing units. Finally, the second stage sampling unit (or SSU) is housing
+unit which were selected with equal probability using a systematic sampling algorithm
+with a random start within each selected PSU. Within each housing unit interviews were
+attempted with all households (i.e. no subsampling was implemented beyond the selection
+of the housing units). We consider different models at the national level for household frame
+to see how the informative sampling works without considering any simulation study.
+
+At the National Level (for CORTE v.):
+
+
 
