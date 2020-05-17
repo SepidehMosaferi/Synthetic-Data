@@ -327,9 +327,39 @@ data set and true data set are as follows: -0.001592752, -0.003529634, 0.0004894
 All of the results show that the
 utility of synthetic data set is good enough and the risk of disclosure is low.
 
-|Mean and SD of propensity score utility value|
-| *(utility.summary)*|
+**Mean and SD of propensity score utility value *(utility.summary)* **
+
 | Mean | SD |
 | --- | --- |
 | cart 0.009697415 | 0.0005481128 |
 
+
+## References
+
+- Gelman, A. (2007). Struggles with Survey Weighting and Regression Modeling. *Statistical Science*, 
+**22**, 153-164. [link](http://www.stat.columbia.edu/~gelman/research/published/STS226.pdf)
+
+- Hu, J., Reiter, J. P., and Wang, Q. (2013). *Disclosure Risk Evaluation for Fully Synthetic Categorical Data*. 
+Duke University, Durham NC 27708, USA. [link] (http://www2.stat.duke.edu/~jerry/Papers/PSD2014.pdf)
+
+- Little, R. J. (2008). Weighting and Prediction in Sample Surveys. *Calcutta Statistical
+Association Bulletin*, **60**, 1-49. [link](https://journals.sagepub.com/doi/abs/10.1177/0008068320080301?casa_token=bT3o8YCRNn0AAAAA:ABaVu6qMwb9vzooV0A97vg2rZ2_z2TZa21gK3G_BYIbNaRIBH2U6738uPCwV0XUtcZSwIMcA0YM5_Q)
+
+- Little, R. (1993). Statistical Analysis of Masked Data. *Journal of Official Statistics*, **9**,
+407-426. [link](https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/statistical-analysis-of-masked-data.pdf)
+
+- Little, R. (2011). Calibrated Bayes, for Statistics in General, and Missing Data in
+Particular. *Statistical Science*, **26**, 162-174. [link](https://projecteuclid.org/euclid.ss/1312204002)
+
+- Pfeffermann, D., and Sverchkov, M. (1999). Parametric and Semi-Parametric Estima-
+tion of Regression Models Fitted to Survey Data. *Sankay: The Indian Journal of
+Statistics*, **61**. 166-186. [link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.596.4915&rep=rep1&type=pdf)
+
+- Raghunathan, T. E., Reiter, J. P., and Rubin, D. B. (2003). Multiple Imputation for
+Statistical Disclosure Limitation. *Journal of Official Statistics*, **19**, 1-16. [link](https://www.scb.se/contentassets/ca21efb41fee47d293bbee5bf7be7fb3/multiple-imputation-for-statistical-disclosure-limitation.pdf)
+
+- Reiter, J. P., and Mitra, R. (2009). Estimating Risks of Identification Disclosure in
+Partially Synthetic Data. *The Journal of Privacy and Confidentiality*, **1**, 99-110. [link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.210.3869&rep=rep1&type=pdf)
+
+
+**NOTE:** For further understanding, please see the R code.
