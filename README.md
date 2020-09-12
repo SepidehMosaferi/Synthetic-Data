@@ -124,7 +124,7 @@ terms perform poorly and need more investigation.
 
 They provided an example according to
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=y_i=1&plus;x_i&plus;\epsilon_i;&space;\quad&space;\epsilon_i&space;\sim&space;\mathcal{N}(0,1),&space;\quad&space;i=1,...,N" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_i=1&plus;x_i&plus;\epsilon_i;&space;\quad&space;\epsilon_i&space;\sim&space;\mathcal{N}(0,1),&space;\quad&space;i=1,...,N" title="y_i=1+x_i+\epsilon_i; \quad \epsilon_i \sim \mathcal{N}(0,1), \quad i=1,...,N" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_{0k}:&space;\textit{Corr}_s(\epsilon_i^k,w_i)=0&space;\quad&space;k=1,2,..." target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_{0k}:&space;\textit{Corr}_s(\epsilon_i^k,w_i)=0&space;\quad&space;k=1,2,..." title="H_{0k}: \textit{Corr}_s(\epsilon_i^k,w_i)=0 \quad k=1,2,..." /></a>
 
 with three different size variables:
 
