@@ -17,9 +17,12 @@ Another disadvantage of SRMI is that it is a parametric method, and it might
 be beneficial to think about a robust method which is not completely parametric such as
 some semi-parametric methods. 
 
-Another kind of modeling is using the penalized spline of propensity prediction, where
+Another kind of modeling is using the penalized spline of propensity prediction, 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y_i|p^{*}_i(\psi),x_{i1},...,x_{ip};\psi,\beta,\phi,\sigma^2&space;\sim&space;\mathcal{N}(spl(p^{*}_i(\psi),\beta)&plus;g(p^*_i,x_{i2},...,x_{ip};\phi),\sigma^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_i|p^{*}_i(\psi),x_{i1},...,x_{ip};\psi,\beta,\phi,\sigma^2&space;\sim&space;\mathcal{N}(spl(p^{*}_i(\psi),\beta)&plus;g(p^*_i,x_{i2},...,x_{ip};\phi),\sigma^2)" title="y_i|p^{*}_i(\psi),x_{i1},...,x_{ip};\psi,\beta,\phi,\sigma^2 \sim \mathcal{N}(spl(p^{*}_i(\psi),\beta)+g(p^*_i,x_{i2},...,x_{ip};\phi),\sigma^2)" /></a>
+
+where
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=spl(p^{*}_i(\psi),\beta)=\beta_0&plus;\beta_1p^{*}_i(\psi)&plus;\sum_{k=1}^{K}\beta_{k&plus;1}(p^{*}_i(\psi)-\kappa_k)_{&plus;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?spl(p^{*}_i(\psi),\beta)=\beta_0&plus;\beta_1p^{*}_i(\psi)&plus;\sum_{k=1}^{K}\beta_{k&plus;1}(p^{*}_i(\psi)-\kappa_k)_{&plus;}" title="spl(p^{*}_i(\psi),\beta)=\beta_0+\beta_1p^{*}_i(\psi)+\sum_{k=1}^{K}\beta_{k+1}(p^{*}_i(\psi)-\kappa_k)_{+}" /></a>
 
 For more details we refer to ([Little](https://projecteuclid.org/euclid.ss/1312204002), 2011).
@@ -114,7 +117,7 @@ estimators are biased. In this situation the distribution of population and samp
 different. So, in informative sampling, we need to account for sample selection effects. To
 test the sampling ignorability, we can try
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H_{0k}:&space;\textit{Corr}_s(\e_i^k,w_i)=0&space;\quad&space;k=1,2,..." target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_{0k}:&space;\textit{Corr}_s(\e_i^k,w_i)=0&space;\quad&space;k=1,2,..." title="H_{0k}: \textit{Corr}_s(\epsilon_i^k,w_i)=0 \quad k=1,2,..." /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=H_{0k}:&space;\textit{Corr}_s(e_i^k,w_i)=0&space;\quad&space;k=1,2,..." target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_{0k}:&space;\textit{Corr}_s(e_i^k,w_i)=0&space;\quad&space;k=1,2,..." title="H_{0k}: \textit{Corr}_s(e_i^k,w_i)=0 \quad k=1,2,..." /></a>
 
 where Corr is the correlation under the sample distribution and e comes from the model
 that we consider for the y_i's as observations. In practice, usually testing the first 2 or 3
